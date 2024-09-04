@@ -3,3 +3,10 @@ tf variable types
 2. number => 3
 3. bool => true/false
 4. any => deafult value
+5. list => ["1", "2"]
+6. map => {
+    p1 = pp
+    p2 = ppp
+}
+7. object => Complex object
+8. tuple => Complex object
