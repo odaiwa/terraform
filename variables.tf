@@ -48,3 +48,11 @@ variable "string-set" {
   default = ["val1", "val2"]
 }
 
+variable "obj1" {
+  type = object({
+    name = string
+    color= string
+    age = number
+    food = list(string)
+  })
+}
