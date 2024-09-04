@@ -1,4 +1,4 @@
 resource "random_pet" "name" {
-  prefix = "Mrs"
-  separator = "*"
+  prefix = var.prefix
+  separator = var.separator
 }
