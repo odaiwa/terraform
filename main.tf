@@ -1,4 +1,4 @@
 resource "random_pet" "name" {
-  prefix = var.prefies[0]
+  prefix = var.content["keys1"]
   separator = var.separator
 }
