@@ -1,0 +1,5 @@
+tf variable types
+1. string => "alphanumiric"
+2. number => 3
+3. bool => true/false
+4. any => deafult value
