@@ -19,6 +19,15 @@ variable "content" {
   }
 }
 
+variable "content-int" {
+  type = map(number)
+  default = {
+    "key1" : 1
+    "key2" : 2
+  }
+}
+
+
 variable "string-list" {
   type    = list(string)
   default = ["value", "value1"]
