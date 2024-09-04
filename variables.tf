@@ -63,3 +63,15 @@ variable "obj1" {
   }
 }
 
+variable "tuple1" {
+  type = tuple([ string, number, bool ])
+  default = [ "aws", 0, false ]
+}
+
+variable "name23" {
+  type = number
+}
+
+variable "seperator1" {
+  type = string
+}
