@@ -1,0 +1,10 @@
+1. terraform validate => validates of the tf files are valid
+2. terraform fmt => formats terraform files
+3. terraform show (-json) => shows the current state 
+4. terraform provides => shows all the used providers in the directory
+5. terraform providers mirror <dicrectory> => copies the current providers to another directory
+6. terraform output <outname-name> => print all outputs diffined in the terraform files
+7. terraform refresh => update state file
+8. terraform plan => show execution plan
+9. terraform apply => applies the execution plan
+10. terraform graph => shows dependencies graph 
