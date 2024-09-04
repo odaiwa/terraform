@@ -8,11 +8,11 @@ variable "prefix" {
 
 variable "prefies" {
   default = ["stg", "dev", "prod"]
-  type    = list # indexes 0 ,1 ,2
+  type    = list(string) # indexes 0 ,1 ,2
 }
 
 variable "content" {
-  type = map
+  type = map(string)
   default = {
     "key1": "value1"
     "key2": "value2"
