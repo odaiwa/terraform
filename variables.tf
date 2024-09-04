@@ -50,9 +50,16 @@ variable "string-set" {
 
 variable "obj1" {
   type = object({
-    name = string
-    color= string
-    age = number
-    food = list(string)
+    name  = string
+    color = string
+    age   = number
+    food  = list(string)
   })
+  default = {
+    age   = 2
+    color = "azure"
+    food  = ["machines", "vpcs", "clusters"]
+    name  = "jenkins"
+  }
 }
+
