@@ -26,6 +26,11 @@ resource "random_pet" "name4" {
 resource "random_pet" "test" {
   prefix    = var.name23
   separator = var.seperator1
+  # tf will show an error message if the resource is deleted when having a change in the entity
+  # will be deleted only it the command of tf destroy is used
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 
