@@ -34,4 +34,8 @@ resource "local_file" "pet" {
   filename = "./here.txt"
   content  = "the name generated from the prev setp ${random_pet.test.id}"
   depends_on = [ random_pet.test ]
+  # ensures that the new reource will be created and then destroy the first one
+  lifecycle {
+    create_before_destroy = true
+  }
 }
