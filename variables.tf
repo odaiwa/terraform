@@ -83,3 +83,12 @@ variable "file_names" {
     "./f3.txt"
   ]
 }
+
+variable "file_names_set" {
+ type = set(string)
+  default = [
+    "./f1.txt",
+    "./f2.txt",
+    "./f3.txt"
+  ]
+}

@@ -70,3 +70,20 @@ resource "local_file" "count_name1" {
   # this will create file in the same count of what we have in file_names list
   count = length(var.file_names)
 }
+
+
+
+resource "local_file" "foreach_name" {
+  filename = each.value
+  content  = "the name generated from the prev setp"
+  # it's only working on set or map
+  for_each = var.file_names_set
+}
+
+
+resource "local_file" "list_as_set_foreach_name" {
+  filename = each.value
+  content  = "the name generated from the prev setp"
+  # use the list as set 
+  for_each = toset(var.file_names)
+}
