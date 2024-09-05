@@ -75,3 +75,11 @@ variable "name23" {
 variable "seperator1" {
   type = string
 }
+
+variable "file_names" {
+  default = [
+    "./f1.txt",
+    "./f2.txt",
+    "./f3.txt"
+  ]
+}

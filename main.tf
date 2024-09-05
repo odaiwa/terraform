@@ -55,3 +55,18 @@ resource "local_file" "pet" {
 data "local_file" "ff"{
     filename = "./ff.txt"
 }
+
+
+resource "local_file" "count_name" {
+  filename = "./count_files.txt"
+  content  = "the name generated from the prev setp"
+  # this will create the file three times with the same name, at the end only one will be craeted
+  count = 3
+}
+
+resource "local_file" "count_name1" {
+  filename = var.file_names[count.index]
+  content  = "the name generated from the prev setp"
+  # this will create file in the same count of what we have in file_names list
+  count = length(var.file_names)
+}
