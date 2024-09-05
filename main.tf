@@ -21,6 +21,12 @@ resource "random_pet" "name3" {
 resource "random_pet" "name4" {
   prefix    = var.content["key1"]
   separator = var.separator
+  # prevent updates on the resource with defined attributes to ignore
+  # i.e. if we changed the name in the remote provider we don't want tf to change it back to what we have in the resource or the provider file
+  # in this case we don't want to change sperator
+  lifecycle {
+    ignore_changes = [ separator ]
+  }
 }
 
 resource "random_pet" "test" {
