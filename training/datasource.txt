@@ -1,2 +1,5 @@
 Data sources allow Terraform to use information defined outside of Terraform, defined by another separate Terraform configuration, or modified by functions.
 it's defined using the keyword `data`
+
+1. it's only reads infrastructure
+2. called Data Resources
