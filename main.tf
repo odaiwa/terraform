@@ -50,3 +50,8 @@ resource "local_file" "pet" {
     create_before_destroy = true
   }
 }
+
+
+data "local_file" "ff"{
+    filename = "./ff.txt"
+}
